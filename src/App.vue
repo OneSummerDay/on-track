@@ -6,11 +6,10 @@ import TheNav from './components/TheNav.vue'
 <template>
 
   <TheHeader />
-<!--Main block-->
-  <TheNav />
+
   <main class="flex flex-grow flex-col"></main>
 
-<!--Navigation menu-->
-  
+  <TheNav />
+    
 </template>
 
