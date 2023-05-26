@@ -1,19 +1,13 @@
 <script setup>
-
-import { ClockIcon, ListBulletIcon, ChartBarIcon } from '@heroicons/vue/24/outline'
 import TheHeader from './components/TheHeader.vue'
-
-const navItems = {
-  timeline: ClockIcon,
-  activities: ListBulletIcon,
-  progress: ChartBarIcon
-}
+import TheNav from './components/TheNav.vue'
 </script>
 
 <template>
-<!--Header-->
+
   <TheHeader />
 <!--Main block-->
+  <TheNav />
   <main class="flex flex-grow flex-col"></main>
 
 <!--Navigation menu-->

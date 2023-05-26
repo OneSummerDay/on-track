@@ -1,5 +1,6 @@
 <script setup>
 import { CheckCircleIcon} from '@heroicons/vue/24/solid'
+import TheLogo from './TheLogo.vue'
 </script>
 
 <template>
