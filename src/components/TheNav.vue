@@ -5,6 +5,8 @@ import NavItem from './NavItem.vue'
 
 defineOptions(['currentPage'])
 
+const emit = defineEmits(['navigate'])
+
 const navItems = {
   [PAGE_TIMELINE]: ClockIcon,
   [PAGE_ACTIVITIES]: ListBulletIcon,
@@ -21,7 +23,7 @@ const navItems = {
     :key="page" 
     :href="`#${ page }`" 
     :class="{'bg-gray-200 pointer-event-none': page === currentPage}"
-    @click="currentPage = page"
+    @click="emit('navigate', page)"
     >
         <component :is="icon" class="h-6 w-6" /> {{ page }}
     </NavItem>
