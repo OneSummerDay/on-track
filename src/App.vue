@@ -10,14 +10,12 @@ import { normalizePageHash } from './functions'
 const currentPage = ref(normalizePageHash())
 
 
-
 function goTo(page){
   currentPage.value = page
 }
 </script>
 
 <template>
-
   <TheHeader 
   @go-to-timeline="goTo(PAGE_TIMELINE)" 
   @go-to-progress="goTo(PAGE_PROGRESS)"
@@ -30,6 +28,5 @@ function goTo(page){
   </main>
 
   <TheNav :current-page="currentPage" @navigate="goTo($event)" />
-    
-</template>
+  </template>
 
