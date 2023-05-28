@@ -20,11 +20,18 @@ function normalizePageHash() {
 
     return PAGE_TIMELINE
 }
+
+function goTo(page){
+  currentPage.value = page
+}
 </script>
 
 <template>
 
-  <TheHeader />
+  <TheHeader 
+  @go-to-timeline="goTo(PAGE_TIMELINE)" 
+  @go-to-progress="goTo(PAGE_PROGRESS)"
+  />
 
   <main class="flex flex-grow flex-col">
     <TheTimeline v-show="currentPage === PAGE_TIMELINE" />
@@ -32,7 +39,7 @@ function normalizePageHash() {
     <TheProgress v-show="currentPage === PAGE_PROGRESS" />
   </main>
 
-  <TheNav :current-page="currentPage" @navigate="currentPage = $event" />
+  <TheNav :current-page="currentPage" @navigate="goTo($event)" />
     
 </template>
 
