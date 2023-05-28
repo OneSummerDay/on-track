@@ -11,7 +11,7 @@
                 class="absolute -top-4 left-1/2 -translate-x-1/2 rounded bg-gray-100 px-2 font-mono text-lg text-gray-500"
                 >
                 {{ i }}:00
-            </a>
+                </a>
             </li>
         </ul>
     </div>
