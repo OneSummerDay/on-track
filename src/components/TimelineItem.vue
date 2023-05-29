@@ -9,6 +9,12 @@ const hourLinkClasses = [
         ? 'bg-purple-900 font-black text-white'
         : 'bg-gray-100 text-gray-500'
 ]
+
+const options = [
+    { value: 1, label: 'Coding' },
+    { value: 2, label: 'Reading' },
+    { value: 3, label: 'Playing' }
+]
 </script>
 
 <template>
@@ -25,9 +31,9 @@ const hourLinkClasses = [
             </button>
             <select name="" id="" class="w-full truncate rounded bg-gray-100 py-1 px-2 text-2xl">
                 <option selected disabled value="">Rest</option>
-                <option value="">Coding</option>
-                <option value="">Playing</option>
-                <option value="">Reading</option>
+                <option v-for="{ value, label } in options" :key="value" :value="value">
+                {{ label }}
+                </option>
             </select>
         </div>
     </li>
