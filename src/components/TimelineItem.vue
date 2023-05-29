@@ -19,7 +19,7 @@ const hourLinkClasses = [
         >
         {{ timelineItem.hour }}:00
         </a>
-        <div>
+        <div class="flex gap-2">
             <button class="rounded bg-gray-100 p-3 enabled:hover:bg-gray-200 disabled:cursor-not-allowed disabled:opacity-50">
                 <XMarkIcon class="h-8" />
             </button>
